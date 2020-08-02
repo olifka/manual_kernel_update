@@ -1,1 +1,1 @@
-{"name":"centos-7-5","version":"0","provider":"virtualbox","directory":"boxes/centos-7-5/0/virtualbox"}
+{"name":"oliferuk/centos-7-5.8","version":"1.0","provider":"virtualbox","directory":"boxes/oliferuk-VAGRANTSLASH-centos-7-5.8/1.0/virtualbox"}

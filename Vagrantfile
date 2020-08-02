@@ -3,26 +3,28 @@ MACHINES = {
   # VM name "kernel update"
   :"kernel-update" => {
               # VM box
-              :box_name => "centos-7-5",
+              :box_name => "oliferuk/centos-7-5.8",
               # VM CPU count
-              :cpus => 2,
+              :cpus => 1,
               # VM RAM size (Mb)
               :memory => 1024,
               # networks
               :net => [],
               # forwarded ports
-              :forwarded_port => []
-            }
+              :forwarded_port => [],
+  }
 }
 
 Vagrant.configure("2") do |config|
   MACHINES.each do |boxname, boxconfig|
     # Disable shared folders
     config.vm.synced_folder ".", "/vagrant", disabled: true
+	#config.disksize.size = '50GB'
     # Apply VM config
     config.vm.define boxname do |box|
       # Set VM base box and hostname
       box.vm.box = boxconfig[:box_name]
+	  box.vm.box_version = "1.0"
       box.vm.host_name = boxname.to_s
       # Additional network config if present
       if boxconfig.key?(:net)

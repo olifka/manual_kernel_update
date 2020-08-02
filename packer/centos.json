@@ -1,8 +1,8 @@
 {
   "variables": {
-    "artifact_description": "CentOS 7.7 with kernel 5.x",
+    "artifact_description": "CentOS 7.8 with kernel 5.8",
     "artifact_version": "7.8.2003",
-    "image_name": "centos-7.7"
+    "image_name": "centos-7.8"
   },
 
   "builders": [
